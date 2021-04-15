@@ -30,10 +30,10 @@ export class CompComponent implements OnInit, OnChanges, DoCheck {
   ngOnChanges(changes: SimpleChanges) {
     // throw new Error("Method not implemented.");
     const newNum: SimpleChange = changes.num;
-    debugger;
+    // debugger;
     console.log("previousValue", newNum.previousValue);
     console.log("currentValue", newNum.currentValue);
-    console.log("something triggered");
+    // console.log("something triggered");
   }
 
   ngOnInit() {
@@ -42,6 +42,28 @@ export class CompComponent implements OnInit, OnChanges, DoCheck {
 
   ngDoCheck() {
     // throw new Error("Method not implemented.");
-    debugger;
+    // debugger;
+    console.log("ngDoCheck");
   }
+
+  ngAfterContentInit() {
+    console.log("ngAfterContentInit");
+  }
+
+  ngAfterContentChecked() {
+    console.log("ngAfterContentChecked");
+  }
+
+  ngAfterViewInit() {
+    console.log("ngAfterViewInit");
+  }
+
+  ngAfterViewChecked() {
+    console.log("ngAfterViewChecked");
+  }
+
+  ngOnDestroy() {
+    console.log("component is destroyed");
+  }
+
 }

@@ -9,6 +9,7 @@ export class AppComponent  {
 
 private number: number = 100;
 // name: string = "kishan";
+onVisible: boolean = true;
 
 // updateName() {
 //   this.name = "kp"
@@ -20,6 +21,10 @@ user = {
 
 updateName() {
   this.user.name = "kishan"
+}
+
+switchVisibility() {
+  this.onVisible = !this.onVisible;
 }
 
 get count()
