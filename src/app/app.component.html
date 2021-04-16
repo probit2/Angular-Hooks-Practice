@@ -5,3 +5,21 @@
   <button (click)="updateName()">change name</button>
   <button (click)="switchVisibility()">Delete Comp</button>
 </div>
+
+
+<select [(ngModel)]="selectedValue">
+  <option *ngFor="let item of items;" [value]="item.value"> {{item.name}}</option>
+</select>
+
+<div [ngSwitch]="selectedValue">
+  <div *ngSwitchCase="1">
+    1
+  </div>
+    <div *ngSwitchCase="2">
+    2
+  </div>
+  <div *ngSwitchCase="3">
+    3
+  </div>
+  
+</div>
